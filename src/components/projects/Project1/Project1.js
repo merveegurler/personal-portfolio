@@ -2,7 +2,7 @@ import React from "react";
 import "./Project1.css"
 import {Container, Col, Row} from "react-bootstrap";
 import {NavBar} from "./NavBar";
-import fur1 from "/home/merve/Masaüstü/reactproject1/src/assets/img/furniture1.png"
+import fur1 from "/home/merve/Masaüstü/personal-portfolio/src/assets/img/furniture1.png"
 
 
 export const Project1 = () => {

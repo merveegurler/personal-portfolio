@@ -3,7 +3,6 @@ import { Container } from "react-bootstrap";
 import Col from "react-bootstrap/Col";
 
 export const Skills = () => {
-    console.log("geldi");
     return (
         <div id = "skills">
             <Container id="skills-con">

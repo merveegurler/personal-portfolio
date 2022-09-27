@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import logo from '/home/merve/Masaüstü/reactproject1/src/assets/img/logo.svg';
-import navIcon1 from '/home/merve/Masaüstü/reactproject1/src/assets/img/nav-icon1.svg';
-import navIcon2 from '/home/merve/Masaüstü/reactproject1/src/assets/img/nav-icon2.png';
-import navIcon3 from '/home/merve/Masaüstü/reactproject1/src/assets/img/nav-icon3.svg';
+import logo from '/home/merve/Masaüstü/personal-portfolio/src/assets/img/logo.svg';
+import navIcon1 from '/home/merve/Masaüstü/personal-portfolio/src/assets/img/nav-icon1.svg';
+import navIcon2 from '/home/merve/Masaüstü/personal-portfolio/src/assets/img/nav-icon2.png';
+import navIcon3 from '/home/merve/Masaüstü/personal-portfolio/src/assets/img/nav-icon3.svg';
 import { HashLink } from 'react-router-hash-link';
 import React from 'react';
 
