@@ -3,6 +3,7 @@ import { Container, Nav } from "react-bootstrap";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import projectImg1 from "../assets/img/furniture1.png";
+import projectImg2 from "../assets/img/gtu_app.jpeg";
 import { useNavigate, Link } from "react-router-dom";
 import { Project1 } from "./projects/Project1/Project1";
 export default Project1;
@@ -24,9 +25,17 @@ export const Projects = () => {
         <h1 id="proje">Projeler</h1>
         <div id="projects-col">
           <Nav>
+          <Nav.Item className="project3 project">
+              <Nav.Link href="./Project3">
+                <Row>
+                  <img src={projectImg2} alt="" id="project-img1" />
+                  <h2>GTU App</h2>
+                </Row>
+              </Nav.Link>
+            </Nav.Item>
             <Nav.Item className="project1 project">
               <Row>
-                <Nav.Link href="./Project1">
+                <Nav.Link href="./projects/Project1/Project1.js">
                   <div id="black-backg">
                     <img src={projectImg1} alt="" id="project-img1" />
                   </div>
@@ -34,7 +43,7 @@ export const Projects = () => {
                 </Nav.Link>
               </Row>
             </Nav.Item>
-            <Nav.Item className="project2 project">
+            {/* <Nav.Item className="project2 project">
               <Nav.Link href="./Project2">
                 <Row>
                   <img src={projectImg1} alt="" id="project-img1" />
@@ -42,14 +51,7 @@ export const Projects = () => {
                 </Row>
               </Nav.Link>
             </Nav.Item>
-            <Nav.Item className="project3 project">
-              <Nav.Link href="./Project3">
-                <Row>
-                  <img src={projectImg1} alt="" id="project-img1" />
-                  <h2>GTU App</h2>
-                </Row>
-              </Nav.Link>
-            </Nav.Item>
+            
             <Nav.Item className="project4 project">
               <Nav.Link href="./Project4">
                 <Row>
@@ -57,7 +59,7 @@ export const Projects = () => {
                   <h2>Drum Machine</h2>
                 </Row>
               </Nav.Link>
-            </Nav.Item>
+            </Nav.Item> */}
           </Nav>
         </div>
       </Container>
