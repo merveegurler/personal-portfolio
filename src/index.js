@@ -1,4 +1,5 @@
 import React from 'react';
+import { HashRouter } from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -14,7 +15,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={ <App /> }/>
         <Route path="/Project1" element={<Project1/>} />
@@ -22,7 +23,7 @@ root.render(
         <Route path="/Project3" element={<Project3/>} />
         <Route path="/Project4" element={<Project4/>} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </>
 );
 
