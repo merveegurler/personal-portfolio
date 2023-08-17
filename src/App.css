@@ -25,7 +25,6 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 75px;
-  width: 100%;
 }
 
 body {
@@ -83,11 +82,7 @@ p.danger {
 	color: red;
 }
 /************ Navbar Css ************/
-.navbar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 .container {
   width: 80%;
   display: flex;
@@ -95,16 +90,20 @@ p.danger {
 }
 
 .navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 18px 0;
   position: fixed;
   width: 100%;
   top: 0;
+  left: 0;
   z-index: 9999;
   transition:  0.32s ease-in-out;
 }
 
 .navbar-collapse {
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -120,15 +119,20 @@ p.danger {
   display: flex;
   flex-direction: column;
   justify-content: center;
-    align-items: center;
-    width: 9%;
+  align-items: center;
+  width: 10%;
 }
 
 #logo-img {
   width: 100%;
 }
 
-nav.navbar .navbar-nav .nav-link.navbar-link {
+.navbar-nav {
+  width: 40%;
+  display: flex;
+}
+
+nav.navbar .navbar-nav .nav-link.navbar-link, .hashlink {
   font-weight: 400;
   color: #fff !important;
   letter-spacing: 0.8px;
@@ -143,11 +147,22 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 span.navbar-text {
     display: flex;
     align-items: center;
+    width: 60%;
 }
 .social-icon {
-    display: inline-block;
+    display: flex;
+    justify-content: flex-end;
     margin-left: 14px;
+    width: 50%;
 }
+
+span.navbar-text > a {
+  width: 50%;
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+}
+
 .social-icon a {
     width: 42px;
     height: 42px;
@@ -187,7 +202,6 @@ span.navbar-text {
   border: 1px solid #fff;
   padding: 18px 34px;
   font-size: 18px;
-  margin-left: 18px;
 	position: relative;
 	background-color: transparent;
 	transition: 0.3s ease-in-out;
@@ -264,7 +278,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Banner Css ************/
 .banner {
   margin-top: 0;
-  padding: 260px 0 100px 0;
+  padding: 125px 0 100px 0;
   background-image: url('./assets/img/banner-bg.png');
   background-position: top center;
   background-size: cover;
@@ -303,7 +317,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #fff;
   font-weight: 700;
   font-size: 20px;
-  margin-top: 60px;
   letter-spacing: 0.8px;
   display: flex;
   align-items: center;
@@ -375,6 +388,46 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   justify-content: center;
 }
 
+/************ Experiences Css ************/
+#experiences {
+  background-color: rgb(230, 67, 118);
+  width: 100%;
+}
+
+#experiences-con {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.experiences-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 50px;
+}
+
+.experience {
+  width: 49%;
+  background-color: rgba(230, 67, 118, 0.7);
+}
+
+.experience p {
+  font-size: 12px;
+}
+
+.experience ul {
+  margin-top: 10px;
+}
+
+.experience ul li {
+  font-size: 15px;
+}
+
 /************ Skills Css ************/
 .aligh-items-center {
   display: flex;
@@ -406,6 +459,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 1.2em;
 }
 
+#skills-col-1 li {
+  font-size: 15px;
+}
+
 #skill {
   display: flex;
   flex-direction: column;
@@ -416,7 +473,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 #yetenek{
   text-align: center;
-  font-size: 3.5em !important;
 }
 /************ Projects Css ************/
 
@@ -430,6 +486,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: linear-gradient(135deg, rgba(255,99,71,1) 0%, rgba(255,99,71,0.8)35%, rgba(255,99,71,0.4) 100%);
 }
 
+#proje {
+  margin-top: 50px;
+}
+
 #projects-con {
   display: flex;
   flex-direction: column;
@@ -438,15 +498,30 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   align-items: center;
 }
 
-#proje {
-  font-size: 3.5em;
-}
-
 #projects-col {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   margin-left: 25px;
+}
+
+.links {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.links a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  border-style: groove;
+  border-color: bisque;
+  border-radius: 15%;
+  height: 100%;
 }
 
 .nav {
@@ -459,10 +534,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .nav-link {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .row {
   width: 100%;
-  padding: 20px;
+  padding: 40px;
+  height: 100%;
 }
 .project {
   display: flex;
@@ -472,9 +551,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-style: groove;
   border-color: bisque;
   border-radius: 15%;
+  height: 700px;
 }
 
-h2 {
+h2, h4 {
   color: white;
 }
 
@@ -488,14 +568,71 @@ h2 {
 
 #project-img1 {
   width: 100%;
-  height: 450px;
 }
 
 #black-backg {
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.6);
+}
+
+#project-img1, #project-img2, #project-img3, #project-img4 {
+  height: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+
+  .aligh-items-center, #skills-col-1 {
+    flex-direction: column;
+  }
+
+  .nav {
+    align-items: center;
+  }
+
+  #ban-col, #isVisible {
+    width: 100%;
+  }
+
+  .project, .links a {
+    width: 49%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  nav.navbar .navbar-nav .nav-link.navbar-link, .hashlink {
+    font-size: 12px;
+    padding: 0 10px;
+  }
+
+  .social-icon {
+    display: flex;
+  }
+
+  .social-icon a {
+    width: 30px;
+    height: 30px;
+  }
+
+  .navbar-text button {
+    margin: 10px;
+    padding: 5px 15px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .project, .links a  {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .container {
+    width: 100%;
+  }
 }

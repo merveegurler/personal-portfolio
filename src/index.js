@@ -3,10 +3,6 @@ import { HashRouter } from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import {Project1} from './components/projects/Project1/Project1';
-import {Project2} from './components/projects/Project2';
-import {Project3} from './components/projects/Project3';
-import {Project4} from './components/projects/Project4';
 
 
 import reportWebVitals from './reportWebVitals';
@@ -17,11 +13,7 @@ root.render(
   <>
     <HashRouter>
       <Routes>
-        <Route path="/" element={ <App /> }/>
-        <Route path="/Project1" element={<Project1/>} />
-        <Route path="/Project2" element={<Project2/>} />
-        <Route path="/Project3" element={<Project3/>} />
-        <Route path="/Project4" element={<Project4/>} />
+        <Route path="*" element={ <App /> }/>
       </Routes>
     </HashRouter>
   </>

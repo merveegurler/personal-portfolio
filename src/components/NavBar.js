@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import logo from '../logo.svg';
+import logo from '../assets/img/logo_transparent.png';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.png';
 import navIcon3 from '../assets/img/nav-icon3.svg';
@@ -31,16 +31,16 @@ export const NavBar = () => {
   }
 
   return (
-      <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
+      <Navbar expand="md" className={scrolled ? "scrolled" : ""} id="main-navbar">
         <Container>
           <Navbar.Brand href="/">
             <img id="logo-img" src={logo} alt="Logo" />
           </Navbar.Brand>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-              <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
-              <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
+              <HashLink to={"/Banner#home"} className="hashlink" onClick={() => onUpdateActiveLink('home')}>Home</HashLink>
+              <HashLink to={"/Skills#skills"} className="hashlink" onClick={() => onUpdateActiveLink('skills')}>Skills</HashLink>
+              <HashLink to={"/Projects#projects"} className="hashlink" onClick={() => onUpdateActiveLink('projects')}>Projects</HashLink>
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">

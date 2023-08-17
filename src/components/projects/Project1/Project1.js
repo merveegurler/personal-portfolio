@@ -3,12 +3,13 @@ import "./Project1.css"
 import {Container, Col, Row} from "react-bootstrap";
 import {NavBar} from "./NavBar";
 import fur1 from "../../../assets/img/furniture1.png"
+export default Project1;
 
 
-export const Project1 = () => {
+export function Project1 () {
+  console.log("geldi");
     return (
       <div id="project1">
-        <NavBar />
         <Container id="project-con1">
           <Col id="img-col1">
             <h1 id="title">Basic Furniture Company Automation</h1>

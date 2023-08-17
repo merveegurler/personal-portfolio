@@ -7,14 +7,14 @@ export const Skills = () => {
         <div id = "skills">
             <Container id="skills-con">
                 <div id="skill">
-                    <h1 id="yetenek">
+                    <h2 id="yetenek">
                         Yetenekler
-                    </h1>
+                    </h2>
                     <Col id="skills-col-1">
                         <div>
-                            <h3>
+                            <h4>
                                 Programlama Dilleri
-                            </h3>
+                            </h4>
                             <ul>
                                 <li>C</li>
                                 <li>C++</li>
@@ -26,9 +26,9 @@ export const Skills = () => {
                             </ul>
                         </div>
                         <div>
-                            <h3>
+                            <h4>
                                 Web Geliştirme
-                            </h3>
+                            </h4>
                             <ul>
                                 <li>HTML</li>
                                 <li>CSS</li>
@@ -39,9 +39,9 @@ export const Skills = () => {
                             </ul>
                         </div>
                         <div>
-                            <h3>
+                            <h4>
                                 İşletim Sistemleri
-                            </h3>
+                            </h4>
                             <ul>
                                 <li>Linux Mint</li>
                                 <li>Linux Ubuntu</li>
@@ -49,9 +49,9 @@ export const Skills = () => {
                             </ul>
                         </div>
                         <div>
-                            <h3>
+                            <h4>
                                 Diller
-                            </h3>
+                            </h4>
                             <ul>
                                 <li>İngilizce</li>
                             </ul>

@@ -6,7 +6,7 @@ export class Project3 extends React.Component {
     return (
       <div id="project3">
         <Container id="project-con3">
-          
+          <p>Sayfa henüz tamamlanmadı!</p>
         </Container>
       </div>
     );
