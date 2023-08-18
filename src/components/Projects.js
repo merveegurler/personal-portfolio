@@ -1,20 +1,34 @@
 import React from "react";
-import { Container, Nav } from "react-bootstrap";
-import Col from "react-bootstrap/Col";
+import { Container } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import projectImg1 from "../assets/img/furniture1.png";
 import projectImg2 from "../assets/img/gtu_app.jpeg";
 import projectImg3 from "../assets/img/app_view.png"
 import projectImg4 from "../assets/img/soft_keyboard.png"
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Project1 } from "./projects/project1/Project1";
 import { Project2 } from "./projects/Project2";
 import { Project3 } from "./projects/Project3";
 import { Project4 } from "./projects/Project4";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 export const Projects = () => {
+
+  const projects = [["/projects/Project2", projectImg2, "GTU App", "project-img2"], 
+                    ["/projects/project1/Project1", projectImg1, "Mobilya Şirketi Otomasyonu", "project-img1"],
+                    ["/projects/Project3", projectImg3, "ECG Analysis For Heart Condition Monitoring", "project-img3"],
+                    ["/projects/Project4", projectImg4, "Disablity Typer Using Head", "project-img4"]];
+
+  const links = projects.map((project) => (
+    <Link to={project[0]} >
+        <Row>
+          <img src={project[1]} alt="" id={project[3]}/>
+          <h4>{project[2]}</h4>
+        </Row>
+      </Link>
+  ));
+
   return (
     <div id="projects">
       <Container id="projects-con">
@@ -23,35 +37,9 @@ export const Projects = () => {
           <Routes>
             <Route exact path="*" element={
               <div class= "row links" style={{display: "flex"}}>
-                <Link to="/projects/Project2">
-                  <Row>
-                    <img src={projectImg2} alt="" id="project-img2" />
-                    <h4>GTU App</h4>
-                  </Row>
-                </Link>
-                <Link to="/projects/project1/Project1">
-                  <Row>
-                  <div id="black-backg">
-                    <img src={projectImg1} alt="" id="project-img1" />
-                  </div>
-                  <h4>Mobilya Şirketi Otomasyonu</h4>
-                  </Row>
-                </Link>
-                <Link to="/projects/Project3" >
-                  <Row>
-                    <img src={projectImg3} alt="" id="project-img3"/>
-                    <h4>ECG Analysis For Heart Condition Monitoring</h4>
-                  </Row>
-                </Link>
-                <Link to="/projects/Project4">
-                  <Row>
-                    <img src={projectImg4} alt="" id="project-img4" />
-                    <h4>Disablity Typer Using Head</h4>
-                  </Row>
-                </Link>
+                {links}
               </div>
             }>
-
             </Route>
             <Route exact path="/projects/project1/Project1" element={<Project1 />}></Route>
             <Route exact path="/projects/Project2" element={<Project2 />}></Route>
@@ -63,3 +51,4 @@ export const Projects = () => {
     </div>
   );
 };
+
